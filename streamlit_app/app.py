@@ -80,8 +80,8 @@ with col2:
 
             try:
                 # Get API endpoint from environment variable or use default
-                api_endpoint = os.getenv("API_URL", "http://model:8000")
-                predict_url = f"{api_endpoint.rstrip('/')}/predict"
+                api_endpoint = os.getenv("API_ENDPOINT", "http://localhost:8000/")
+                predict_url = f"{api_endpoint}predict"
 
                 st.write(f"Connecting to API at: {predict_url}")
 

@@ -13,9 +13,9 @@ app = FastAPI(
     ),
     version="1.0.0",
     contact={
-        "name": "School of Devops",
-        "url": "https://schoolofdevops.com",
-        "email": "learn@schoolofdevops.com",
+        "name": "Best MLE",
+        "url": "https://bestmle.com",
+        "email": "learn@bestmle.com",
     },
     license_info={
         "name": "Apache 2.0",
