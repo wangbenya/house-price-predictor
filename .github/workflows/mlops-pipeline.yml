@@ -55,13 +55,13 @@ jobs:
                 --output data/processed/featured_house_data.csv \
                 --preprocessor models/trained/preprocessor.pkl
         - name: Upload processed data artifact
-          uses: actions/upload-artifact@v3
+          uses: actions/upload-artifact@v4
           with:
                 name: processed-data
                 path: data/processed/featured_house_data.csv
         
         - name: upload processor artifact
-          uses: actions/upload-artifact@v3
+          uses: actions/upload-artifact@v4
           with:
                 name: preprocessor
                 path: models/trained/preprocessor.pkl
