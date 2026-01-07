@@ -1,4 +1,12 @@
 services:
+
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:latest
+    ports:
+      - "5555:5000"
+    command: mlflow server --host 0.0.0.0 --backend-store-uri sqlite:///mlflow.db --default-artifact-root /tmp/mlruns
+    container_name: mlflow-tracking-server
+
   fastapi:
     image: fastapi
     ports:
@@ -7,6 +15,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: fastapi-app
+    depends_on:
+      - mlflow
 
   streamlit:
     image: streamlit
